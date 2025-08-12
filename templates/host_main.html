@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="he">
+<head><meta charset="UTF-8" /><title>ניהול הוסט</title></head>
+<body>
+  <h1>ניהול הוסט - עסקים קיימים</h1>
+  <ul>
+    {% for biz, info in businesses.items() %}
+      <li>{{ biz }} - משתמש: {{ info.username }}</li>
+    {% else %}
+      <li>אין עסקים רשומים</li>
+    {% endfor %}
+  </ul>
+  <p><a href="/logout">התנתק</a></p>
+</body>
+</html>
